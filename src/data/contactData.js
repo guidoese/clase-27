@@ -3,7 +3,7 @@ const contacts = [
     id: 1,
     name: "Yoda",
     last_time_conection: "Hace 2 horas",
-    profile_picture:
+    porfile_picture:
       "https://images.immediate.co.uk/production/volatile/sites/3/2017/12/yoda-the-empire-strikes-back-28a7558.jpg?quality=90&webp=true&resize=800,534",
 
     messages: [
