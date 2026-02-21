@@ -8,28 +8,34 @@ export default function ContactSidebar() {
   // Una vez consumido me traera el valor del value del contexto
   const { contacts, favorite_name } = useContext(ContactsContext);
   return (
-    <div>
-      <h2>Whatsapp Clone</h2>
-      <h3>Me cae muy bien: {favorite_name}</h3>
-      <div>
+    <aside className="sidebar">
+      <div className="sidebar-header">
+        <h2>WhatsApp Clone</h2>
+        <h4>{favorite_name}</h4>
+      </div>
+      <div className="contacts-list">
         {contacts.map((contact) => {
           return (
-            <Link to={`/contact/${contact.id}`} key={contact.id}>
+            <Link
+              to={`/contact/${contact.id}`}
+              key={contact.id}
+              className="contact-item"
+            >
               <img
+                className="contact-avatar"
                 src={contact.porfile_picture}
                 alt={contact.name}
-                style={{
-                  width: "200px",
-                }}
               />
-              <h3>{contact.name}</h3>
-              <span>{contact.last_time_conection}</span>
-              <br />
-              <hr />
+              <div className="contact-meta">
+                <div className="contact-name">{contact.name}</div>
+                <div className="contact-time">
+                  {contact.last_time_conection}
+                </div>
+              </div>
             </Link>
           );
         })}
       </div>
-    </div>
+    </aside>
   );
 }

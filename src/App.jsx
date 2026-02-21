@@ -12,7 +12,7 @@ function App() {
       <ContactsContextProvider>
         <Routes>
           <Route path="/" element={<HomeScreen />} />
-          <Route path="/Contact/:contact_id" element={<ContactScreen />} />
+          <Route path="/contact/:contact_id" element={<ContactScreen />} />
           <Route path="*" element={<ErrorNotFoundScreen />} />
         </Routes>
       </ContactsContextProvider>
